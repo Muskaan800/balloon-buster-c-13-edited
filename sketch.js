@@ -7,9 +7,9 @@ function preload(){
   arrowImage = loadImage("arrow0.png");
   bowImage = loadImage("bow0.png");
   red_balloonImage = loadImage("red_balloon0.png");
-  green_balloonImage = loadImage("greenbaloon0.png");
-  pink_balloonImage = loadImage("pinkbaloon0.png");
-  blue_balloonImage = loadImage("bluebaloon0.png");
+  green_balloonImage = loadImage("green_balloon0.png");
+  pink_balloonImage = loadImage("pink_balloon0.png");
+  blue_balloonImage = loadImage("blue_balloon0.png");
   
   
   
@@ -58,16 +58,16 @@ function draw() {
     if (select_balloon == 1) {
       redBalloon();
     }
-  } else if ( select_balloon == 2){
+   else if ( select_balloon == 2){
     greenBalloon();
   } else if (select_balloon == 3){
     blueBalloon();
   }else {
     pinkBalloon();
   }
-  
+  }
   drawSprites();
-  Text('score :'+ score, 270,30);
+  text('score :'+ score, 270,30);
 }
 
 
@@ -85,7 +85,7 @@ function draw() {
 
 function redBalloon() {
   var red = createSprite(0,Math.round(random(20, 370)), 10, 10);
-  red.addImage('red_balloon0.png');
+  red.addImage(red_balloonImage);
   red.velocityX = 3;
   red.lifetime = 150;
   red.scale = 0.1;
@@ -95,7 +95,7 @@ function redBalloon() {
 function blueBalloon() {
   //write code for spwaning blue balloons
   var blue = createSprite(0,Math.round(random(20, 370)), 10, 10);
-  blue.addImage('blue_balloon0.png');
+  blue.addImage(blue_balloonImage);
   blue.velocityX = 3;
   blue.lifetime = 150;
   blue.scale = 0.1;
@@ -105,7 +105,7 @@ function blueBalloon() {
 function greenBalloon() {
   //write code for spwaning green balloons
   var green = createSprite(0,Math.round(random(20, 370)), 10, 10);
-  green.addImage('green_balloon0.png');
+  green.addImage(green_balloonImage);
   green.velocityX = 3;
   green.lifetime = 150;
   green.scale = 0.1;
@@ -115,7 +115,7 @@ function greenBalloon() {
 function pinkBalloon() {
   //write code for spwaning pink balloons
   var pink = createSprite(0,Math.round(random(20, 370)), 10, 10);
-  pink.addImage('pink_balloon0.png');
+  pink.addImage(pink_balloonImage);
   pink.velocityX = 3;
   pink.lifetime = 150;
   pink.scale = 0.1;
